@@ -30,14 +30,14 @@ namespace Juabat
             {
                 WindowStyle = ProcessWindowStyle.Hidden,
                 FileName = exe,
-                Arguments = File.ReadAllText(txt),
-                RedirectStandardOutput = true,
+                Arguments = File.ReadAllText(txt),/*,
+                RedirectStandardOutput = true,*/
                 UseShellExecute = false
             };
             Process process = Process.Start(pro);
-            var output = process.StandardOutput.ReadToEnd();
+            //var output = process.StandardOutput.ReadToEnd();
             process.WaitForExit();
-            Console.WriteLine(output);
+            //Console.WriteLine(output);
         }
     }
 }
